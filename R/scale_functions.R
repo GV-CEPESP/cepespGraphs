@@ -33,11 +33,20 @@ Cepesp_paletas<-function(palette="principal", reverse=F){
 	colorRampPalette(pal)
 }
 
-#Cepesp_paletas("pt_psdb")(3) # Para verificar as cores da paleta se 8 cores
-
 #' CEPESP colour scales
 #'
 #' \code{scale_*_cepesp} functions are
+#'
+#' @example
+#'
+#' ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +
+#'   geom_point(size = 4) +
+#'   scale_color_cepesp("pt_psdb")
+#'
+#' ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
+#'   geom_bar() +
+#'   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+#'   scale_fill_cepesp()
 #'
 #' @export
 
@@ -60,14 +69,3 @@ scale_fill_cepesp <- function(palette = "principal", discrete = TRUE, reverse = 
     scale_color_gradientn(colours = pal(256), ...)
   }
 }
-
-##############
-## Exemplos do uso ##
-#ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +
-#    geom_point(size = 4) +
-#    scale_color_cepesp("pt_psdb")
-
-#ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
-#    geom_bar() +
-#    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-#    scale_fill_cepesp()
