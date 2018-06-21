@@ -1,0 +1,16 @@
+---
+title: "cepespGraphs"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Install
+
+```{r, eval = FALSE}
+if(!require(devtools)) install.packages("devtools")
+devtools::install_github("GV-CEPESP/cepespGraphs")
+```
+
