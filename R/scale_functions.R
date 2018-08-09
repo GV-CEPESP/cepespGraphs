@@ -27,6 +27,7 @@ paletas<-list(
 ### Aqui podemos criar outras paletas com qualquer cor que definimos ali em cima
 
 # Definindo a função Cepesp_paletas para definir as funções depois
+#' @export
 Cepesp_paletas<-function(palette="principal", reverse=F){
 	pal<-paletas[[palette]]
 	if(reverse) pal<-rev(pal)
